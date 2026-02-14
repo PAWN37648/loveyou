@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1{
+           padding-top: 2rem;
+        }
+        #guard{
+            position: absolute;
+            z-index: 2;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(57, 57, 57);
+        }
+        body{
+            background-color: gray;
+        }
+        input{
+            box-shadow: 0px 0px 10px 1px #fff;
+            margin-top: 1rem;
+            color: black;
+            margin-top: 1.5rem;
+        }
+        button{
+            color: black;
+        }
+            .sideways-box {
+width: 47vh;
+height: 175vw;
+position: absolute;
+top: 51%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: white;
+border-radius: 10px;
+border: 2px dashed red;
+z-index: 1;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+    @font-face {
+        font-family: 'KissingS';
+        src: url(fonts/kissing_season/Kissing\ Season.ttf);
+        font-weight: normal;
+        font-style: normal;
+    }
+        @font-face {
+        font-family: 'feilla';
+        src: url(fonts/feilla/Feilla.ttf);
+        font-weight: normal;
+        font-style: normal;
+    }
+        @font-face {
+        font-family: 'LoveHouse';
+        src: url(fonts/love_house/Love\ House.otf);
+        font-weight: normal;
+        font-style: normal;
+    }
+        @font-face {
+        font-family: 'cookiemonster';
+        src: url(fonts/cookiemonster/CookieMonster.ttf);
+        font-weight: normal;
+        font-style: normal;
+    }
+        @font-face {
+        font-family: 'helloHoney';
+        src: url(fonts/hello-honey-personal-use/hello\ honey.otf);
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'cute';
+        src: url(fonts/too-freakin-cute-demo/Too\ Freakin\ Cute\ Demo.ttf);
+        font-weight: normal;
+        font-style: normal;
+    }
+            .KissingS{
+        font-family: 'KissingS';
+        color: black;
+    }
+        .feilla{
+        font-family: 'feilla';
+        color: black;
+    }
+        .LoveHouse{
+        font-family: 'LoveHouse';
+        color: black;
+    }
+        .cookiemonster{
+        font-family: 'cookiemonster';
+        color: black;
+    }
+        .helloHoney{
+        font-family: 'helloHoney';
+        color: black;
+    }
+        .cute{
+        font-family: 'cute';
+        color: black;
+    }
+    .padding{
+        padding: 0px 1rem 0px 1rem;
+    }
+    .schmol{
+        font-size: 0.6rem;
+    }
+    .big{
+        font-size: 1.5rem;
+    }
+    .pink{
+        color: rgb(255, 98, 124);
+    }
+    .songbox{
+        background-color: white;
+        border: 1px solid pink;
+        border-radius: 10px;
+        width: 80%;
+        height: 20%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        color: black;
+    }
+    .songcover{
+        background: url(RFY.jpg);
+        width: 40%;
+        height: 80%;
+        background-size: cover;
+        border-radius: 10px;
+        margin-left: 1rem;
+        border: 1px solid pink;
+    }
+    .song{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 2rem;
+    }
+    .big{
+        font-size: 2rem;
+    }
+    .title{
+        margin-bottom: 0.3rem;
+    }
+    .artist{
+        font-size: 0.6rem;
+        margin-bottom: 0.3rem;
+    }
+    .arial{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .songBtn{
+        padding: 0px;
+        width: 100%;
+        background-color: white;
+        border: none;
+        margin-top: 0.6rem;
+    }
+    .btns{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+    }
+    </style>
+</head>
+<body id="body">
+
+<center>
+    <div id="guard"><h1>Whats the password?</h1>
+    <input type="number" id="password"><br><br>
+    <button onclick="password()">Enter</button>
+    </div>
+</center>
+    </div>
+    <div class="sideways-box centerVelements transition" id="someText">
+        <p class="cute big">Song for you<span class="cute pink">***</span></p><br><br>
+        <div class="songbox">
+            
+            <div class="songcover">
+
+        </div>
+        <div class="song">
+            <div class="title cute">Room for you<span class="cute pink">*</span></div>
+            <div class="artist cute">grentperez, Lyn Lapid</div>
+            <div class="btns">
+            <button onclick="playMusic()" class="cute songBtn pink" id="play">Play</button>
+            <button onclick="pauseMusic()" class="arial songBtn pink">II</button>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    </div>
+<audio id="audio"><source src="Roomforyou.mp3" type="audio/mpeg"></audio>
+</body>
+<script>
+    let guard = document.getElementById("guard");
+    let body = document.getElementById("body")
+    function password(){
+        let pass = document.getElementById("password").value;
+        if(pass === "222811"){
+            guard.remove();
+            body.style.backgroundColor = "pink";
+        }
+    }
+    function playMusic(){
+        document.getElementById("audio").play();
+    }
+    function pauseMusic(){
+        document.getElementById("audio").pause();
+    }
+</script>
+</html>
