@@ -5,12 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
-            margin: 0px;
-            color: white;
-            font-family: Arial, Helvetica, sans-serif;
-            text-align: center;
-        }
 
         h1{
            padding-top: 2rem;
@@ -22,9 +16,7 @@
             height: 100vh;
             background-color: rgb(57, 57, 57);
         }
-        body{
-            background-color: gray;
-        }
+        
         input{
             box-shadow: 0px 0px 10px 1px #fff;
             margin-top: 1rem;
@@ -34,22 +26,7 @@
         button{
             color: black;
         }
-            .sideways-box {
-width: 47vh;
-height: 175vw;
-position: absolute;
-top: 51%;
-left: 50%;
-transform: translate(-50%, -50%);
-background-color: white;
-border-radius: 10px;
-border: 2px dashed red;
-z-index: 1;
-display: flex;
-flex-direction: column;
-justify-content: space-evenly;
-align-items: center;
-}
+
 
     @font-face {
         font-family: 'KissingS';
@@ -196,38 +173,9 @@ align-items: center;
     </style>
 </head>
 <body id="body">
-
-<center>
-    <div id="guard"><h1>Whats the password?</h1>
-    <input type="number" id="password"><br><br>
-    <button onclick="password()">Enter</button>
-    </div>
-</center>
-    <div class="sideways-box centerVelements transition" id="someText">
-        <div id="bear"></div>
-        <div class="cute">Sorry nainis ka sakin kanina hindi ko sinasadya iyon promise<span class="pink cute">*</span>.<br>Nasobrahan ako sa pangaasar, mapapatawad moko? Gagawin ko ang lahat para mapatawad mo lang ako<span class="pink cute">***</span></div>
-        <div id="sorry"></div>
-    </div>
+<p>Siguro hindi mo na ito tinitignan, hindi ako sure. Pero kung makita mo man ito, hindi ko na kinaya. Lumayo ako dahil ang sakit na kasi ng naramdaman ko. Kaya kong mapatunayan na ang dinepensahan mo ay may masamang isipin sa akin pero wala ka atang pake, sorry sa "walang pake". Wala naman na akong magagawa kung pilit mo siyang depensahan. Sige tanggap ko hindi mo siya dinedepensahan pero ang sakit dahil hinahayaan mo parin siya. Ayoko ng ganoon, pag nawawala ang katarungan. Sorry pero sobra akong nasaktan noon. Siguro nagiging emotional ka habang binabasa to, ako rin naman habang ginagawa to. Maganda na sana ang mayroon tayo, pero pinasok ng iba. Anyways congrats at naging with honors ka, proud ako.<br>3/25/2026<br>1:59am sorry nag puyat nanaman ako.</p>
 
 </body>
 <script>
-    let guard = document.getElementById("guard");
-    let body = document.getElementById("body");
-    let bear = document.getElementById("bear");
-    let apology = document.getElementById("sorry");
-    function password(){
-        let pass = document.getElementById("password").value;
-        if(pass === "222811"){
-            guard.remove();
-            body.style.backgroundColor = "pink";
-            apologize();
-        }
-    }
-    function apologize(){
-    setTimeout(() => {
-        bear.style.opacity = "1";
-        apology.style.opacity = "1";
-    }, 2000);
-    }
 </script>
 </html>
